@@ -501,6 +501,10 @@ module Spree
       updater.persist_totals
     end
 
+    def is_risky?
+      self.payments.where("avs_response IS NOT NULL").count > 1
+    end
+
     private
 
       def link_by_email

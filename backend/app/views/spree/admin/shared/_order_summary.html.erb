@@ -30,5 +30,7 @@
       <dt data-hook><%= Spree.t(:date_completed) %>:</dt>
       <dd id='date_complete'><%= pretty_time(@order.completed_at) %></dd>
     <% end %>
+
+    <%= render 'spree/admin/orders/risk_analysis' %>
   </dl>
 </header>
